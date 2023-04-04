@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html {
   box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
   overflow-y: hidden;
   display: flex;
   align-items: center;
-
+  font-family: Roboto, sans-serif;
 }
 
 /* Video Background */
@@ -49,7 +49,7 @@ video {
   z-index: 2;
   display: flex;
   justify-content: center;
-
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .input-container {
@@ -82,7 +82,7 @@ input {
   border-radius: 20px;
   background: #fff;
   outline: none;
-
+  font-family: Roboto, sans-serif;
 }
 
 /* Button */
@@ -93,10 +93,14 @@ button {
   margin-top: 15px;
   border: none;
   text-transform: uppercase;
-  background: #006959;
+  background: #004469;
   color: white;
   cursor: pointer;
   outline: none;
+}
+
+button:hover {
+  filter: brightness(110%);
 }
 
 
@@ -107,7 +111,7 @@ ul {
 }
 
 li {
-
+  display: inline-block;
   font-size: 30px;
   list-style-type: none;
   padding: 10px;
@@ -126,6 +130,35 @@ li span {
   top: 60px;
 }
 
+.complete-title {
+  animation: complete 4s infinite;
+}
+
+@keyframes complete {
+  0% {
+    color: rgb(235, 13, 13);
+  }
+
+  25% {
+    color: rgb(235, 211, 13);
+  }
+
+  50% {
+    color: rgb(172, 235, 13);
+    transform: scale(1.5);
+  }
+
+  75% {
+    color: rgb(0, 59, 251);
+  }
+
+  100% {
+    color: rgb(180, 13, 235);
+  }
+
+
+}
+
 
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
@@ -141,7 +174,8 @@ li span {
   }
 
   .container {
-
+    min-width: unset;
+    width: 95vw;
     min-height: 245px;
     padding: 20px;
     margin: 10px;
